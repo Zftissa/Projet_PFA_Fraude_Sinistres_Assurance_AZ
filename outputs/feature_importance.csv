@@ -1,41 +1,41 @@
 feature,importance
-incident_severity_Major Damage,0.12750695624883052
-insured_hobbies_chess,0.045597988121381834
-incident_severity_Minor Damage,0.04159437779367233
-vehicle_claim,0.03588250493093713
-total_claim_amount,0.03346015718986287
-incident_severity_Total Loss,0.032641013592492996
-property_claim,0.03055999816769264
-injury_claim,0.027949487623914335
-policy_annual_premium,0.026951169253474808
-policy_age_days,0.02589715143562161
-months_as_customer,0.025014101032920615
-insured_hobbies_cross-fit,0.024429629563054747
-age,0.02228640570139398
-incident_hour_of_the_day,0.021030039977779896
-auto_year,0.020485036161972236
-policy_bind_year,0.020372625737122563
-capital-loss,0.01676333613208091
-capital-gains,0.016592501832419313
-incident_dayofweek,0.0138186185786329
-witnesses,0.011281004517688934
-umbrella_limit,0.008774590351665277
-bodily_injuries,0.007876644384696256
-policy_deductable,0.007164397964112712
-incident_month,0.00710048610828008
-authorities_contacted_Police,0.00582729703375831
-number_of_vehicles_involved,0.005516147587166507
-collision_type_Rear Collision,0.004974100074232242
-incident_state_WV,0.00474344559460637
-policy_state_OH,0.0046296422721460355
-incident_severity_Trivial Damage,0.004603420712648626
-insured_hobbies_camping,0.004523195248146524
-policy_csl_500/1000,0.004424581763138627
-policy_csl_100/300,0.004401516967336753
-insured_occupation_exec-managerial,0.004396359159307004
-insured_education_level_High School,0.004329045933068733
-insured_relationship_own-child,0.004287152062855952
-incident_state_SC,0.004278423641216845
-policy_csl_250/500,0.004196694927041685
-incident_type_Single Vehicle Collision,0.004035066613413873
-policy_state_IL,0.0040322537622513735
+insured_hobbies_chess,3.9361163863395583
+insured_hobbies_cross-fit,3.0050112035918155
+incident_severity_Major Damage,2.810567558761521
+insured_hobbies_sleeping,1.3815076825286248
+insured_hobbies_camping,1.3396763222932888
+incident_severity_Trivial Damage,1.2173441981545314
+insured_hobbies_dancing,1.214745963236188
+auto_model_Civic,0.9886253343152621
+auto_model_X6,0.9370586311127801
+auto_model_Wrangler,0.9130950264989977
+incident_severity_Minor Damage,0.8974075416961004
+insured_hobbies_yachting,0.8628950662201518
+insured_hobbies_golf,0.8541224564895408
+auto_model_Grand Cherokee,0.8325550285149349
+auto_model_CRV,0.7680154770655264
+incident_severity_Total Loss,0.7292557086573533
+auto_model_Malibu,0.7094998917417543
+insured_hobbies_kayaking,0.6790777224538688
+insured_occupation_exec-managerial,0.6517562147727765
+insured_hobbies_movies,0.6492283895742041
+auto_model_3 Series,0.6331894170843683
+auto_model_Camry,0.5995848097352804
+insured_hobbies_bungie-jumping,0.5906026288068887
+auto_model_Forrestor,0.5809133031787629
+insured_occupation_handlers-cleaners,0.5468043035364211
+insured_relationship_husband,0.5385983953777715
+auto_make_Accura,0.5102349961574412
+insured_occupation_craft-repair,0.4903999799992215
+insured_occupation_priv-house-serv,0.48770626712234016
+policy_bind_year,0.47135117241909147
+auto_model_Escape,0.4506111935832077
+insured_hobbies_exercise,0.44548603717161334
+auto_make_Audi,0.4431608207996717
+auto_model_Pathfinder,0.4383459523746392
+collision_type_Rear Collision,0.4380699710279659
+auto_model_Highlander,0.4340043596150727
+insured_hobbies_paintball,0.43354278741131
+auto_model_Silverado,0.4298128054193935
+insured_education_level_Associate,0.4224213941156523
+incident_city_Northbrook,0.41570448486084643

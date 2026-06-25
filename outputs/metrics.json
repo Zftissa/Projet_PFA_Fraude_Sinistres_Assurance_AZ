@@ -6,7 +6,7 @@
         "non_fraud_count_N": 753,
         "fraud_rate": 0.247
     },
-    "best_model": "Random Forest",
+    "best_model": "Logistic Regression",
     "models": {
         "Logistic Regression": {
             "accuracy": 0.82,
@@ -35,16 +35,16 @@
             }
         },
         "Random Forest": {
-            "accuracy": 0.825,
-            "precision_fraud": 0.6207,
-            "recall_fraud": 0.7347,
-            "f1_fraud": 0.6729,
-            "roc_auc": 0.8315,
+            "accuracy": 0.765,
+            "precision_fraud": 0.5357,
+            "recall_fraud": 0.3061,
+            "f1_fraud": 0.3896,
+            "roc_auc": 0.8285,
             "confusion_matrix": {
-                "true_negative": 129,
-                "false_positive": 22,
-                "false_negative": 13,
-                "true_positive": 36
+                "true_negative": 138,
+                "false_positive": 13,
+                "false_negative": 34,
+                "true_positive": 15
             }
         },
         "ExtraTreesClassifier": {

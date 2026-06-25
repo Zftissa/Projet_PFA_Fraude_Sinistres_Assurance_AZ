@@ -75,9 +75,6 @@ Projet_PFA_Fraude_Sinistres_Assurance_AZ/
 ├── notebooks/
 │   └── exploration_data.ipynb
 │
-└── docs/
-    ├── explication_darija.md
-    └── soutenance_script_fr.md
 ```
 
 ## 7. Méthodologie
@@ -145,15 +142,18 @@ Chaque niveau de risque reçoit une action recommandée :
 
 ## 9. Dashboard Streamlit
 
-Le dashboard contient :
+Le dashboard a été finalisé pour être plus clair pendant la soutenance. Il contient maintenant :
 
-- une présentation du projet ;
+- une page organisée par onglets : **Vue générale**, **Analyse fraude**, **Dossiers suspects** et **Performance modèle** ;
 - des KPIs : nombre de dossiers, fraudes suspectées, taux estimé, probabilité moyenne, risque élevé ;
+- un **seuil de décision ajustable** dans la barre latérale pour montrer l'effet du seuil sur les dossiers suspectés ;
 - des filtres interactifs par niveau de risque, probabilité, type de sinistre et montant ;
 - des graphiques : répartition par risque, distribution des probabilités, top dossiers suspects ;
 - l'importance des variables ;
-- un tableau interactif des dossiers ;
+- un tableau interactif des dossiers triés du plus suspect au moins suspect ;
 - un bouton pour télécharger les résultats en CSV.
+
+Remarque importante : la cible réelle `fraud_reported` n'est pas affichée dans le tableau métier des dossiers suspects, car dans un cas réel le gestionnaire ne connaît pas encore la vraie réponse. Elle est uniquement utilisée dans la partie **Performance modèle** pour l'évaluation.
 
 ## 10. Installation et exécution sur Windows PowerShell
 
@@ -178,7 +178,13 @@ venv\Scripts\activate
 ### Étape 4 : installer les bibliothèques
 
 ```powershell
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
+```
+
+Si Windows utilise le lanceur `py`, tu peux aussi faire :
+
+```powershell
+py -m pip install -r requirements.txt
 ```
 
 ### Étape 5 : entraîner le modèle
@@ -187,10 +193,22 @@ pip install -r requirements.txt
 python train_model.py
 ```
 
+ou :
+
+```powershell
+py train_model.py
+```
+
 ### Étape 6 : lancer le dashboard
 
 ```powershell
-streamlit run app.py
+python -m streamlit run app.py
+```
+
+ou :
+
+```powershell
+py -m streamlit run app.py
 ```
 
 ## 11. Résultats
@@ -202,13 +220,32 @@ Après l'exécution de `train_model.py`, les résultats sont sauvegardés dans l
 - `metrics.json` : métriques des modèles ;
 - `feature_importance.csv` : variables importantes.
 
-## 12. Conclusion
+Résultat obtenu sur la version actuelle du dataset :
+
+- Meilleur modèle : **Logistic Regression** ;
+- Accuracy : **82%** ;
+- Recall fraude : **69,39%** ;
+- F1-score fraude : **65,38%** ;
+- ROC-AUC : **83,04%**.
+
+Dans ce projet, le recall fraude est particulièrement important, car il mesure la capacité du modèle à détecter les dossiers frauduleux.
+
+## 12. Limites du projet
+
+Ce projet reste un outil d'aide à la décision. Ses principales limites sont :
+
+- le dataset contient 1000 dossiers, ce qui reste limité pour un déploiement réel ;
+- le modèle détecte un risque, mais ne prouve pas juridiquement une fraude ;
+- les seuils de risque doivent être validés avec des experts métier ;
+- une compagnie réelle devrait intégrer plus d'historique client et plus de données opérationnelles.
+
+## 13. Conclusion
 
 Ce projet montre comment le Machine Learning peut aider une compagnie d'assurance à détecter les dossiers de sinistres suspects. Le dashboard permet aux gestionnaires de visualiser rapidement les dossiers à risque et de prioriser les contrôles.
 
 Le modèle ne remplace pas l'expert métier. Il sert comme outil d'aide à la décision.
 
-## 13. Perspectives
+## 14. Perspectives
 
 Les améliorations possibles sont :
 

@@ -1,0 +1,83 @@
+{
+    "dataset": {
+        "rows": 1000,
+        "columns": 40,
+        "fraud_count_Y": 247,
+        "non_fraud_count_N": 753,
+        "fraud_rate": 0.247
+    },
+    "best_model": "Random Forest",
+    "models": {
+        "Logistic Regression": {
+            "accuracy": 0.82,
+            "precision_fraud": 0.6182,
+            "recall_fraud": 0.6939,
+            "f1_fraud": 0.6538,
+            "roc_auc": 0.8304,
+            "confusion_matrix": {
+                "true_negative": 130,
+                "false_positive": 21,
+                "false_negative": 15,
+                "true_positive": 34
+            }
+        },
+        "Decision Tree": {
+            "accuracy": 0.805,
+            "precision_fraud": 0.5926,
+            "recall_fraud": 0.6531,
+            "f1_fraud": 0.6214,
+            "roc_auc": 0.6889,
+            "confusion_matrix": {
+                "true_negative": 129,
+                "false_positive": 22,
+                "false_negative": 17,
+                "true_positive": 32
+            }
+        },
+        "Random Forest": {
+            "accuracy": 0.825,
+            "precision_fraud": 0.6207,
+            "recall_fraud": 0.7347,
+            "f1_fraud": 0.6729,
+            "roc_auc": 0.8315,
+            "confusion_matrix": {
+                "true_negative": 129,
+                "false_positive": 22,
+                "false_negative": 13,
+                "true_positive": 36
+            }
+        },
+        "ExtraTreesClassifier": {
+            "accuracy": 0.79,
+            "precision_fraud": 0.5897,
+            "recall_fraud": 0.4694,
+            "f1_fraud": 0.5227,
+            "roc_auc": 0.8236,
+            "confusion_matrix": {
+                "true_negative": 135,
+                "false_positive": 16,
+                "false_negative": 26,
+                "true_positive": 23
+            }
+        },
+        "GradientBoostingClassifier": {
+            "accuracy": 0.78,
+            "precision_fraud": 0.5556,
+            "recall_fraud": 0.5102,
+            "f1_fraud": 0.5319,
+            "roc_auc": 0.8128,
+            "confusion_matrix": {
+                "true_negative": 131,
+                "false_positive": 20,
+                "false_negative": 24,
+                "true_positive": 25
+            }
+        }
+    },
+    "selection_rule": "Meilleur modèle choisi selon F1-score fraude, puis recall fraude, puis ROC-AUC.",
+    "risk_thresholds": {
+        "Faible": "fraud_probability < 0.40",
+        "Moyen": "0.40 <= fraud_probability < 0.70",
+        "Élevé": "fraud_probability >= 0.70"
+    }
+}

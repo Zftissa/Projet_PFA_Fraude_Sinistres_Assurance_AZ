@@ -265,3 +265,31 @@ Le projet suit les étapes suivantes :
 4. **Lancement de l'entraînement** : séparation de la target `fraud_reported` dans `y` et utilisation des autres colonnes dans `X`, puis entraînement et comparaison de plusieurs modèles.
 
 Un notebook explicatif est disponible ici : `notebooks/01_pipeline_machine_learning.ipynb`.
+
+## Pipeline Machine Learning dans le code
+
+Le pipeline demandé par l'encadrant est implémenté directement dans le code Python :
+
+- `src/data_exploration.py` : exploration du dataset, target, valeurs manquantes et valeurs inconnues.
+- `src/ml_pipeline.py` : nettoyage, transformation, séparation `X` / `y`, construction de la matrice numérique.
+- `train_model.py` : lancement de l'entraînement, comparaison des modèles et sauvegarde des résultats.
+- `outputs/feature_importance.csv` : variables les plus influentes pour la prédiction.
+- `run_ml_pipeline.py` : script de démonstration du pipeline complet dans le terminal.
+
+Pour afficher le pipeline dans le terminal :
+
+```powershell
+py run_ml_pipeline.py
+```
+
+Pour entraîner le modèle :
+
+```powershell
+py train_model.py
+```
+
+Pour lancer le dashboard :
+
+```powershell
+py -m streamlit run app.py
+```

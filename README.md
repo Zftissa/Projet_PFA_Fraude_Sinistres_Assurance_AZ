@@ -254,3 +254,14 @@ Les améliorations possibles sont :
 - optimiser les seuils de risque avec les experts métier ;
 - intégrer le dashboard dans le système interne de l'assurance ;
 - ajouter un suivi des dossiers contrôlés après décision du gestionnaire.
+
+## Pipeline Machine Learning demandé par l'encadrant
+
+Le projet suit les étapes suivantes :
+
+1. **Exploration des données** : analyse du fichier `insurance_claims.csv`, identification de la variable cible `fraud_reported` et étude de la répartition fraude / non fraude.
+2. **Transformation et nettoyage** : traitement des valeurs manquantes, gestion des valeurs inconnues et transformation des variables catégorielles en variables numériques.
+3. **Analyse des variables influentes** : génération du fichier `outputs/feature_importance.csv` afin d'identifier les variables qui influencent le plus la prédiction.
+4. **Lancement de l'entraînement** : séparation de la target `fraud_reported` dans `y` et utilisation des autres colonnes dans `X`, puis entraînement et comparaison de plusieurs modèles.
+
+Un notebook explicatif est disponible ici : `notebooks/01_pipeline_machine_learning.ipynb`.
